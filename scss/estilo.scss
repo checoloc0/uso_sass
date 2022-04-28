@@ -1,0 +1,365 @@
+@import "variables";
+@import "limpieza";
+
+
+
+body {
+
+ font-family: 'Nunito Sans', sans-serif;
+ font-size: 1.6rem;
+ background-image:url("../img/presence-ii.png");
+
+}
+.fondo__oscuro{
+    background-color: $fondonegro;
+}
+/*header*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;   
+    color:$fondoblanco;
+     
+ }
+ 
+ .logo_1 {
+   max-width: 50px;
+   max-height: 50px;
+ 
+ }
+ 
+ nav ul{
+     display: flex;
+     gap: 5rem;
+     font-size: 11px;
+     text-align: left;
+     text-decoration: none;
+ }
+ nav ul li{
+      list-style: none;
+ 
+ }
+ a{
+     text-decoration: none;
+     cursor: pointer;
+     color: inherit;
+     font-weight: 600;
+ }
+ a:hover{
+     color:$link_hover;
+
+     text-decoration: overline;
+ }
+
+ 
+
+.contenedor_global{
+
+/*background-color: white;*/
+width: 100vw;
+height:  100vh;
+
+margin: 20px auto;
+display:grid ;
+
+
+
+grid-template-columns:  300px 1fr 1fr;
+grid-template-rows: repeat(9,1fr);
+gap:6px;
+
+grid-template-areas:
+"noticias nosotros nosotros"
+"noticias nosotros nosotros"
+"noticias blog blog"
+"noticias blog blog"
+"noticias servicios servicios"
+"noticias servicios servicios"
+"noticias comunidad comunidad"
+"noticias comunidad comunidad"
+"contacto contacto contacto";
+
+}
+
+.noticias{
+   /* background-color: #ff4e00;
+    background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);*/
+    grid-area: noticias;    
+    
+}
+.nosotros{  
+    grid-area: nosotros;    
+}
+.blog{
+   /* background-color:white;*/
+    grid-area: blog;
+}
+.servicios{
+    /*background-color: white;*/
+    grid-area: servicios;
+    
+}
+.comunidad{
+   /* background-color:white; */
+    grid-area: comunidad;
+}
+.contacto{
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);   
+    grid-area: pie;
+}
+
+
+
+
+.nota{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    
+
+}
+.hero{
+   /* background-color: white;  */
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    
+   
+}
+
+.seccion_blog{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:left;
+  
+
+}
+
+.serv{
+    display: flex;
+    flex-direction: row;
+     align-items: center;
+ justify-content: space-between
+    
+
+}
+
+.pie{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content:left;
+    align-content: center;
+}
+
+
+@media screen and (max-width:768px){
+    .contenedor_global{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(11,1fr);
+        gap:6px;
+        grid-template-areas:   
+         "nosotros nosotros"
+        "nosotros nosotros"
+        "blog blog"
+        "blog blog"
+        "servicios servicios"
+        "servicios servicios"
+        "comunidad comunidad"
+        "comunidad comunidad"
+        "noticias noticias"
+        "noticias noticias"
+        "pie pie"
+        "pie pie";
+    }
+        .noticias{
+            background-color: $fondoblanco;
+            
+        }
+        .pie{
+            display: none;
+        }
+
+   
+    .contenedor_nosotros{
+
+       /* background-color: white;*/
+        width: 100vw;
+        height:  100vh;
+       
+        margin: 20px auto;
+        display:grid ;        
+        
+                
+        grid-template-columns:   1fr 1fr;
+        grid-template-rows: repeat(3,1fr);
+        gap:6px;
+        
+        grid-template-areas:
+        "nosotros nosotros"
+        "video video"
+        "contacto contacto";
+        align-items: center;     
+
+
+    }
+
+    .nosotros{
+       /* background-color: coral;*/
+        grid-area: nosotros;   
+
+        display: flex;
+        flex-direction: column;
+       
+        
+    }
+    .video{
+
+        background-color: $cverde;
+        grid-area: video; 
+    }
+    .contacto{
+
+        background-color: #2a2a72;
+        background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+        grid-area: video; 
+        
+    }
+
+}
+
+
+
+@media screen and (max-width:768px){
+    .contenedor_nosotros{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        gap:6px;
+        grid-template-areas:   
+        "nosotros"
+        "video "
+        "contacto ";
+    
+    }
+
+   
+
+
+}
+
+
+.servicios_all{
+   /* background-color: white; */      
+    display: flex;
+    flex-direction: row;           
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;   
+   
+}
+
+@media screen and (max-width:768px){
+    .servicios_all{
+        background-color: $fondoblanco;       
+    display: flex;
+    flex-direction: column;           
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;   
+    
+    }
+
+   
+
+
+}
+
+.gradiente{
+
+    transition: all 2s ;
+
+}
+.scale:hover{
+    transform: scale(1.1,1.1);
+    border-radius: 30px;
+} 
+
+
+.blog_nota{
+
+   
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    gap: px; 
+    justify-content: space-around;
+
+
+}
+
+.nota{
+    display: block;
+    align-items: center;
+    align-content: center;
+       
+}
+
+.grad4{
+transition: all 3s ;
+
+}
+  .skew:hover{
+    transform: skew(10deg);
+
+}
+
+@media screen and (max-width:768px){
+    .nota{
+        font-size: small;
+        text-align:justify ;
+    
+    }
+
+   
+
+
+}
+
+@media screen and (max-width:768px){
+    .contenedor_salud{
+       
+        font-size: small;
+        text-align:justify ;
+    }
+
+   
+
+
+}
+
+
+.blog_img{
+   /* animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+ 
+   */
+}
+
+@keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+ 
+}
