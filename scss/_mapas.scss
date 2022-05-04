@@ -1,0 +1,33 @@
+$estilos_parrafo: (
+  color: $fondonegro,
+  centro: center,
+  tFuente: 35px,
+  1rem : 1rem,
+  font-family: 'Nunito Sans' sans-serif,
+  font-size: 1.7rem,
+  letra_color:black
+);
+
+
+$estilos_blog: (
+  color: $fondonegro,
+  centro: center,
+  tFuente: 35px,
+  1rem : 1rem,
+  font-family: 'Nunito Sans' sans-serif,
+  font-size: 1.1rem,
+  letra_color:black
+);
+
+@mixin flex-row-center(){
+
+    display:flex;
+    flex-direction: row;
+    align-items: center
+}
+
+@mixin flex-colum-wrap(){
+display: flex;
+flex-direction: column;
+flex-wrap:wrap;
+}

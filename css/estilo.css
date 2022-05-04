@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   background-image: url("../img/presence-ii.png"); }
 
 .fondo__oscuro {
@@ -90,13 +90,16 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  .hero p {
+    color: black; }
 
 .seccion_blog {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Nunito Sans" sans-serif;
+  font-size: 1.1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: left; }
+  justify-content: right; }
 
 .serv {
   display: flex;

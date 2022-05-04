@@ -1,17 +1,19 @@
 @import "variables";
+@import "mapas";
 @import "limpieza";
+
 
 
 
 body {
 
  font-family: 'Nunito Sans', sans-serif;
- font-size: 1.6rem;
- background-image:url("../img/presence-ii.png");
+ font-size: 1.7rem;
+ background-image:$fondo_imagen;
 
 }
 .fondo__oscuro{
-    background-color: $fondonegro;
+    background-color: map-get($estilos_parrafo,color);
 }
 /*header*/
 .header{
@@ -127,33 +129,29 @@ grid-template-areas:
     display: flex;
     flex-direction: column;
     align-items:center;
-    
+    p{
+        color:map-get($estilos_parrafo, letra_color );
+    }
    
 }
 
+
 .seccion_blog{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content:left;
-  
+    font-family: map-get($estilos_blog , font-family );
+    font-size:  map-get($estilos_blog,  font-size);
+    @include  flex-colum-wrap;
+    justify-content:right;
+
 
 }
 
 .serv{
-    display: flex;
-    flex-direction: row;
-     align-items: center;
- justify-content: space-between
-    
-
-}
+    @include flex-row-center;
+     justify-content: space-between
+    }
 
 .pie{
-    display: flex;
-    flex-direction: column;
-    flex-wrap:wrap;
+   @include  flex-colum-wrap;
     justify-content:left;
     align-content: center;
 }
@@ -258,7 +256,7 @@ grid-template-areas:
    /* background-color: white; */      
     display: flex;
     flex-direction: row;           
-    align-items:center;
+    align-items:center;   
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;   
